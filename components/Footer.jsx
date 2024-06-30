@@ -49,7 +49,10 @@ const Footer = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    
+    <div className='container'>
+    <hr />
+    </div>
+      
     </>
   )
 }
