@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import AboutMePic from '../src/assets/About Me.svg'
 import '../styles/AboutMe.css'
 
 const About = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [showMore, setShowMore] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobileView(window.innerWidth <= 768);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -20,7 +19,7 @@ const About = () => {
     <section className="about-me-section" id='about'>
       <Container>
         <Row className="align-items-center">
-          {isMobile ? (
+          {isMobileView ? (
             <>
               <Col xs={12} className="mb-3">
                 <h2 className="about-me-heading hero">About Me</h2>
@@ -30,13 +29,13 @@ const About = () => {
               </Col>
               <Col xs={12}>
                 <p className="about-me-text">
-                  {showMore 
+                  {showMoreInfo 
                     ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque. Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur eget commodo vitae. Amet pellentesque sit pulvinar lorem mi a, euismod risus r."
                     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis."
                   }
                 </p>
-                <Button onClick={() => setShowMore(!showMore)} className="read-more-button">
-                  {showMore ? 'Read Less' : 'Read More'}
+                <Button onClick={() => setShowMoreInfo(!showMoreInfo)} className="read-more-button">
+                  {showMoreInfo ? 'Read Less' : 'Read More'}
                 </Button>
               </Col>
             </>

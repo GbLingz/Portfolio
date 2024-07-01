@@ -1,12 +1,13 @@
 
 
+
 import AboutMe from '../components/AboutMe'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
 import FormCard from '../components/FormCard'
 import Hero from '../components/Hero'
-import Navbarr from '../components/Navbarr'
-import Portfolio from '../components/Portfolio'
+import MyPortfolio from '../components/MyPortfolio'
+import NavigationBar from '../components/NavigationBar'
 import Testimonial from '../components/Testimonial'
 import './App.css'
 
@@ -15,11 +16,12 @@ function App() {
 
   return (
     <>
-    <Navbarr/>
+   
+    <NavigationBar/>
     <Hero/>
     <Card/>
     <AboutMe/>
-    <Portfolio/>
+    <MyPortfolio/>
     <Testimonial/>
     <FormCard/>
     <Footer/>

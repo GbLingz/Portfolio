@@ -6,7 +6,7 @@ import AppImg from '../src/assets/portfoliopic2.svg'
 import EasyImg from '../src/assets/portfolio3.svg'
 
 
-const Portfolio = () => {
+const MyPortfolio = () => {
   return (
     <>
     <main className='container Hero mt-5 mb-5 d-none d-lg-block'> 
@@ -68,4 +68,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default MyPortfolio
