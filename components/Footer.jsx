@@ -24,7 +24,7 @@ const Footer = () => {
               <div className="d-flex flex-column flex-lg-row justify-content-center gap-2 gap-lg-4">
                 <p className="mb-0" type='button'>Home</p>
                 <p className="mb-0" type='button'>Portfolio</p>
-                <p className="mb-0" type='button'>About me</p>
+                <p className="mb-0" type='button'>AboutMe</p>
                 <p className="mb-0" type='button'>Contact</p>
                 <p className="mb-0" type='button'>Testimonials</p>
               </div>
